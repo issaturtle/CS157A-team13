@@ -5,7 +5,7 @@ import datetime
 # MySQL configurations
 config = {
     'user': 'root',
-    'password': '!',
+    'password': '',
     'host': 'localhost',
     'database': 'gamepickerdb',
     'raise_on_warnings': True
@@ -19,8 +19,14 @@ sql_formatted_date = current_date.strftime('%Y-%m-%d')
 # List of game links
 game_links = [
     "https://epicgamesdb.info/p/5e0277378de542ce9bf891d2f919d6c8/cyberpunk-2077",
-    # ... add all the links you want to check
+    "https://epicgamesdb.info/p/1891e44daa4a4b95959f458644c600f2/bioshock-infinite-complete-edition",
+    "https://epicgamesdb.info/p/2ae6edb2223c4f8c97e9839b5b6497bb/hades",
+    "https://epicgamesdb.info/p/2d837b8ee87b434a99a80fca0e4eb960/skyrim",
+    'https://epicgamesdb.info/p/dd845909e1504c048c14499eab60ec62/borderlands-3',
+    "https://epicgamesdb.info/p/9b7c69a2abdd45f390b1781ddc5de30a/dying-light--definitive-edition-upgrade",
+    'https://epicgamesdb.info/p/a85bd01b67184c4c83f03f05404e07a8/battlefield-2042'
 ]
+
 current_date = datetime.date.today()
 sql_formatted_date = current_date.strftime('%Y-%m-%d')
 for link in game_links:
