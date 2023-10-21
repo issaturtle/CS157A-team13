@@ -33,7 +33,7 @@ pageEncoding="UTF-8"%>
                 con = DriverManager.getConnection("jdbc:mysql://localhost:3306/gamepickerdb?autoReconnect=true&useSSL=false", user, password);
 
                 out.println("Database connection successful.<br/><br>");
-                    
+                
                 stmt = con.createStatement();
                 String query = "SELECT game.*, genre.GenreName, genre.Description FROM game INNER JOIN genre ON game.GenreID = genre.GenreID WHERE game.GameName = ?";
                 PreparedStatement pstmt = con.prepareStatement(query);

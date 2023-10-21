@@ -1,3 +1,569 @@
 16-Oct-2023 20:02:34.763 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
 16-Oct-2023 20:02:34.763 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
 16-Oct-2023 20:02:34.764 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@2bfaba70')
+16-Oct-2023 20:05:07.334 SEVERE [http-nio-8080-exec-8] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [An exception occurred processing [/JDBCdemo.jsp] at line [33]
+
+30:             Statement stmt = con.createStatement();
+31:             ResultSet rs = stmt.executeQuery("SELECT GameName, ReleaseDate, Developer FROM game");
+32:             while (rs.next()) {
+33:                 out.println(rs.getInt(1) + "    " + rs.getString(2) + "    " + rs.getString(3) + "<br/><br/>");
+34:             }
+35:             rs.close();
+36:             stmt.close();
+
+
+Stacktrace:] with root cause
+	java.lang.NumberFormatException: For input string: "Cyberpunk 2077"
+		at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)
+		at java.base/jdk.internal.math.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
+		at java.base/java.lang.Double.parseDouble(Double.java:543)
+		at com.mysql.cj.protocol.a.MysqlTextValueDecoder.getDouble(MysqlTextValueDecoder.java:249)
+		at com.mysql.cj.result.AbstractNumericValueFactory.createFromBytes(AbstractNumericValueFactory.java:56)
+		at com.mysql.cj.protocol.a.MysqlTextValueDecoder.decodeByteArray(MysqlTextValueDecoder.java:143)
+		at com.mysql.cj.protocol.result.AbstractResultsetRow.decodeAndCreateReturnValue(AbstractResultsetRow.java:135)
+		at com.mysql.cj.protocol.result.AbstractResultsetRow.getValueFromBytes(AbstractResultsetRow.java:243)
+		at com.mysql.cj.protocol.a.result.ByteArrayRow.getValue(ByteArrayRow.java:91)
+		at com.mysql.cj.jdbc.result.ResultSetImpl.getObject(ResultSetImpl.java:1324)
+		at com.mysql.cj.jdbc.result.ResultSetImpl.getInt(ResultSetImpl.java:830)
+		at org.apache.jsp.JDBCdemo_jsp._jspService(JDBCdemo_jsp.java:156)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:456)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:673)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:834)
+16-Oct-2023 22:07:31.541 SEVERE [http-nio-8080-exec-1] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [22] in the jsp file: [/searchedGame.jsp]
+Connection cannot be resolved to a type
+19:             <th>Description</th>
+20:         </tr>
+21:         <% 
+22:         Connection con = null;
+23:         Statement stmt = null;
+24:         ResultSet rs = null;
+25: 
+
+
+An error occurred at line: [23] in the jsp file: [/searchedGame.jsp]
+Statement cannot be resolved to a type
+20:         </tr>
+21:         <% 
+22:         Connection con = null;
+23:         Statement stmt = null;
+24:         ResultSet rs = null;
+25: 
+26:         String user = "root";
+
+
+An error occurred at line: [24] in the jsp file: [/searchedGame.jsp]
+ResultSet cannot be resolved to a type
+21:         <% 
+22:         Connection con = null;
+23:         Statement stmt = null;
+24:         ResultSet rs = null;
+25: 
+26:         String user = "root";
+27:         String password = "Hunggo881224!"; // Replace with your database password
+
+
+An error occurred at line: [31] in the jsp file: [/searchedGame.jsp]
+DriverManager cannot be resolved
+28: 
+29:         try {
+30:             Class.forName("com.mysql.cj.jdbc.Driver");
+31:             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/gamepickerdb?autoReconnect=true&useSSL=false", user, password);
+32: 
+33:             out.println("Database connection successful.<br/><br>");
+34: 
+
+
+An error occurred at line: [50] in the jsp file: [/searchedGame.jsp]
+SQLException cannot be resolved to a type
+47:         </tr>
+48:         <%
+49:             }
+50:         } catch(SQLException e) {
+51:             out.println("SQLException caught: " + e.getMessage());
+52:             e.printStackTrace();
+53:         } finally {
+
+
+An error occurred at line: [65] in the jsp file: [/searchedGame.jsp]
+SQLException cannot be resolved to a type
+62:                 if (con != null) {
+63:                     con.close();
+64:                 }
+65:             } catch (SQLException e) {
+66:                 out.println("Error while closing resources: " + e.getMessage());
+67:                 e.printStackTrace();
+68:             }
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [22] in the jsp file: [/searchedGame.jsp]
+Connection cannot be resolved to a type
+19:             <th>Description</th>
+20:         </tr>
+21:         <% 
+22:         Connection con = null;
+23:         Statement stmt = null;
+24:         ResultSet rs = null;
+25: 
+
+
+An error occurred at line: [23] in the jsp file: [/searchedGame.jsp]
+Statement cannot be resolved to a type
+20:         </tr>
+21:         <% 
+22:         Connection con = null;
+23:         Statement stmt = null;
+24:         ResultSet rs = null;
+25: 
+26:         String user = "root";
+
+
+An error occurred at line: [24] in the jsp file: [/searchedGame.jsp]
+ResultSet cannot be resolved to a type
+21:         <% 
+22:         Connection con = null;
+23:         Statement stmt = null;
+24:         ResultSet rs = null;
+25: 
+26:         String user = "root";
+27:         String password = "Hunggo881224!"; // Replace with your database password
+
+
+An error occurred at line: [31] in the jsp file: [/searchedGame.jsp]
+DriverManager cannot be resolved
+28: 
+29:         try {
+30:             Class.forName("com.mysql.cj.jdbc.Driver");
+31:             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/gamepickerdb?autoReconnect=true&useSSL=false", user, password);
+32: 
+33:             out.println("Database connection successful.<br/><br>");
+34: 
+
+
+An error occurred at line: [50] in the jsp file: [/searchedGame.jsp]
+SQLException cannot be resolved to a type
+47:         </tr>
+48:         <%
+49:             }
+50:         } catch(SQLException e) {
+51:             out.println("SQLException caught: " + e.getMessage());
+52:             e.printStackTrace();
+53:         } finally {
+
+
+An error occurred at line: [65] in the jsp file: [/searchedGame.jsp]
+SQLException cannot be resolved to a type
+62:                 if (con != null) {
+63:                     con.close();
+64:                 }
+65:             } catch (SQLException e) {
+66:                 out.println("Error while closing resources: " + e.getMessage());
+67:                 e.printStackTrace();
+68:             }
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:673)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:834)
+16-Oct-2023 22:08:10.048 SEVERE [http-nio-8080-exec-10] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [22] in the jsp file: [/searchedGame.jsp]
+Connection cannot be resolved to a type
+19:             <th>Description</th>
+20:         </tr>
+21:         <% 
+22:         Connection con = null;
+23:         Statement stmt = null;
+24:         ResultSet rs = null;
+25: 
+
+
+An error occurred at line: [23] in the jsp file: [/searchedGame.jsp]
+Statement cannot be resolved to a type
+20:         </tr>
+21:         <% 
+22:         Connection con = null;
+23:         Statement stmt = null;
+24:         ResultSet rs = null;
+25: 
+26:         String user = "root";
+
+
+An error occurred at line: [24] in the jsp file: [/searchedGame.jsp]
+ResultSet cannot be resolved to a type
+21:         <% 
+22:         Connection con = null;
+23:         Statement stmt = null;
+24:         ResultSet rs = null;
+25: 
+26:         String user = "root";
+27:         String password = "Hunggo881224!"; // Replace with your database password
+
+
+An error occurred at line: [31] in the jsp file: [/searchedGame.jsp]
+DriverManager cannot be resolved
+28: 
+29:         try {
+30:             Class.forName("com.mysql.cj.jdbc.Driver");
+31:             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/gamepickerdb?autoReconnect=true&useSSL=false", user, password);
+32: 
+33:             out.println("Database connection successful.<br/><br>");
+34: 
+
+
+An error occurred at line: [50] in the jsp file: [/searchedGame.jsp]
+SQLException cannot be resolved to a type
+47:         </tr>
+48:         <%
+49:             }
+50:         } catch(SQLException e) {
+51:             out.println("SQLException caught: " + e.getMessage());
+52:             e.printStackTrace();
+53:         } finally {
+
+
+An error occurred at line: [65] in the jsp file: [/searchedGame.jsp]
+SQLException cannot be resolved to a type
+62:                 if (con != null) {
+63:                     con.close();
+64:                 }
+65:             } catch (SQLException e) {
+66:                 out.println("Error while closing resources: " + e.getMessage());
+67:                 e.printStackTrace();
+68:             }
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [22] in the jsp file: [/searchedGame.jsp]
+Connection cannot be resolved to a type
+19:             <th>Description</th>
+20:         </tr>
+21:         <% 
+22:         Connection con = null;
+23:         Statement stmt = null;
+24:         ResultSet rs = null;
+25: 
+
+
+An error occurred at line: [23] in the jsp file: [/searchedGame.jsp]
+Statement cannot be resolved to a type
+20:         </tr>
+21:         <% 
+22:         Connection con = null;
+23:         Statement stmt = null;
+24:         ResultSet rs = null;
+25: 
+26:         String user = "root";
+
+
+An error occurred at line: [24] in the jsp file: [/searchedGame.jsp]
+ResultSet cannot be resolved to a type
+21:         <% 
+22:         Connection con = null;
+23:         Statement stmt = null;
+24:         ResultSet rs = null;
+25: 
+26:         String user = "root";
+27:         String password = "Hunggo881224!"; // Replace with your database password
+
+
+An error occurred at line: [31] in the jsp file: [/searchedGame.jsp]
+DriverManager cannot be resolved
+28: 
+29:         try {
+30:             Class.forName("com.mysql.cj.jdbc.Driver");
+31:             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/gamepickerdb?autoReconnect=true&useSSL=false", user, password);
+32: 
+33:             out.println("Database connection successful.<br/><br>");
+34: 
+
+
+An error occurred at line: [50] in the jsp file: [/searchedGame.jsp]
+SQLException cannot be resolved to a type
+47:         </tr>
+48:         <%
+49:             }
+50:         } catch(SQLException e) {
+51:             out.println("SQLException caught: " + e.getMessage());
+52:             e.printStackTrace();
+53:         } finally {
+
+
+An error occurred at line: [65] in the jsp file: [/searchedGame.jsp]
+SQLException cannot be resolved to a type
+62:                 if (con != null) {
+63:                     con.close();
+64:                 }
+65:             } catch (SQLException e) {
+66:                 out.println("Error while closing resources: " + e.getMessage());
+67:                 e.printStackTrace();
+68:             }
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:673)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:834)
+16-Oct-2023 22:08:30.483 SEVERE [http-nio-8080-exec-4] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [22] in the jsp file: [/searchedGame.jsp]
+Connection cannot be resolved to a type
+19:             <th>Description</th>
+20:         </tr>
+21:         <% 
+22:             Connection con = null;
+23:             Statement stmt = null;
+24:             ResultSet rs = null;
+25: 
+
+
+An error occurred at line: [23] in the jsp file: [/searchedGame.jsp]
+Statement cannot be resolved to a type
+20:         </tr>
+21:         <% 
+22:             Connection con = null;
+23:             Statement stmt = null;
+24:             ResultSet rs = null;
+25: 
+26:             String user = "root";
+
+
+An error occurred at line: [24] in the jsp file: [/searchedGame.jsp]
+ResultSet cannot be resolved to a type
+21:         <% 
+22:             Connection con = null;
+23:             Statement stmt = null;
+24:             ResultSet rs = null;
+25: 
+26:             String user = "root";
+27:             String password = "Hunggo881224!"; // Replace with your database password
+
+
+An error occurred at line: [31] in the jsp file: [/searchedGame.jsp]
+DriverManager cannot be resolved
+28: 
+29:             try {
+30:                 Class.forName("com.mysql.cj.jdbc.Driver");
+31:                 con = DriverManager.getConnection("jdbc:mysql://localhost:3306/gamepickerdb?autoReconnect=true&useSSL=false", user, password);
+32: 
+33:                 out.println("Database connection successful.<br/><br>");
+34: 
+
+
+An error occurred at line: [50] in the jsp file: [/searchedGame.jsp]
+SQLException cannot be resolved to a type
+47:         </tr>
+48:         <%
+49:             }
+50:         } catch(SQLException e) {
+51:             out.println("SQLException caught: " + e.getMessage());
+52:             e.printStackTrace();
+53:         } finally {
+
+
+An error occurred at line: [65] in the jsp file: [/searchedGame.jsp]
+SQLException cannot be resolved to a type
+62:                 if (con != null) {
+63:                     con.close();
+64:                 }
+65:             } catch (SQLException e) {
+66:                 out.println("Error while closing resources: " + e.getMessage());
+67:                 e.printStackTrace();
+68:             }
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [22] in the jsp file: [/searchedGame.jsp]
+Connection cannot be resolved to a type
+19:             <th>Description</th>
+20:         </tr>
+21:         <% 
+22:             Connection con = null;
+23:             Statement stmt = null;
+24:             ResultSet rs = null;
+25: 
+
+
+An error occurred at line: [23] in the jsp file: [/searchedGame.jsp]
+Statement cannot be resolved to a type
+20:         </tr>
+21:         <% 
+22:             Connection con = null;
+23:             Statement stmt = null;
+24:             ResultSet rs = null;
+25: 
+26:             String user = "root";
+
+
+An error occurred at line: [24] in the jsp file: [/searchedGame.jsp]
+ResultSet cannot be resolved to a type
+21:         <% 
+22:             Connection con = null;
+23:             Statement stmt = null;
+24:             ResultSet rs = null;
+25: 
+26:             String user = "root";
+27:             String password = "Hunggo881224!"; // Replace with your database password
+
+
+An error occurred at line: [31] in the jsp file: [/searchedGame.jsp]
+DriverManager cannot be resolved
+28: 
+29:             try {
+30:                 Class.forName("com.mysql.cj.jdbc.Driver");
+31:                 con = DriverManager.getConnection("jdbc:mysql://localhost:3306/gamepickerdb?autoReconnect=true&useSSL=false", user, password);
+32: 
+33:                 out.println("Database connection successful.<br/><br>");
+34: 
+
+
+An error occurred at line: [50] in the jsp file: [/searchedGame.jsp]
+SQLException cannot be resolved to a type
+47:         </tr>
+48:         <%
+49:             }
+50:         } catch(SQLException e) {
+51:             out.println("SQLException caught: " + e.getMessage());
+52:             e.printStackTrace();
+53:         } finally {
+
+
+An error occurred at line: [65] in the jsp file: [/searchedGame.jsp]
+SQLException cannot be resolved to a type
+62:                 if (con != null) {
+63:                     con.close();
+64:                 }
+65:             } catch (SQLException e) {
+66:                 out.println("Error while closing resources: " + e.getMessage());
+67:                 e.printStackTrace();
+68:             }
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:673)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:834)
