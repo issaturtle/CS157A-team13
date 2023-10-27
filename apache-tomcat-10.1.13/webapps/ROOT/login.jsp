@@ -24,7 +24,7 @@ pageEncoding="UTF-8"%>
     Statement stmt = null;
     ResultSet rs = null;
     String dbUser = "root";
-    String dbPassword = "Hunggo881224!";
+    String dbPassword = "";
     try {
         Class.forName("com.mysql.cj.jdbc.Driver");
         con = DriverManager.getConnection("jdbc:mysql://localhost:3306/gamepickerdb?autoReconnect=true&useSSL=false", dbUser, dbPassword);
