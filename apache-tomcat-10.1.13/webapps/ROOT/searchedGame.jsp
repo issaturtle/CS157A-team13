@@ -11,10 +11,14 @@ pageEncoding="UTF-8"%>
 
   </head>
   <body class="main">
+    <%
+    if (session.getAttribute("loggedIn") == null || !((boolean) session.getAttribute("loggedIn"))) {
+        response.sendRedirect("login.jsp");
+    }
+    %>
     <div class="navbar">
         <ul>
             <li><h2>GamePickerDB</h2></li>
-            <li><a href="/homepage.jsp">Home</a></li>
             <li><a href="/main.jsp">Games</a></li>
         </ul>
         <div class="search-bar">

@@ -14,5 +14,8 @@
     %>
 
     <p>You have been successfully logged out. <a href="login.jsp">Log in again</a></p>
+    <% 
+    response.sendRedirect("homepage.jsp");
+    %>
 </body>
 </html>
