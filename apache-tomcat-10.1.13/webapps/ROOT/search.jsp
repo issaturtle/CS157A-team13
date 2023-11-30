@@ -12,7 +12,6 @@
             response.sendRedirect("login.jsp");
         }
     %>
-    <p>Welcome, <%= session.getAttribute("username") %>!</p>
     <div class="navbar">
         <ul>
             <li><a href="/homepage.jsp">Home</a></li>
@@ -40,7 +39,7 @@
         Statement stmt = null;
         ResultSet rs = null;
         String user = "root";
-        String password = "";
+        String password = "Hunggo881224!";
 
         String gametitle = request.getParameter("search");
         if (gametitle == null) {

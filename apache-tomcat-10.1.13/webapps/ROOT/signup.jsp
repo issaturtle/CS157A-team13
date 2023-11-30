@@ -38,7 +38,7 @@
     Statement stmt = null;
     ResultSet rs = null;
     String dbUser = "root";
-    String dbPassword = "";
+    String dbPassword = "Hunggo881224!";
     if(email != null){
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");

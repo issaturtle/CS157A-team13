@@ -9,6 +9,7 @@ body {
     margin: 0;
     flex-direction: column;
 }
+
 form {
     background-color: #f0f0f0;
     border: 1px solid #ccc;
@@ -16,22 +17,22 @@ form {
     border-radius: 5px;
     max-width: 300px;
     align-items: center;
-    padding-right:50px;
+    padding-right: 50px;
 }
+
 label {
     display: block;
     margin: 10px 0;
-    pointer-events: none;
 }
+
 input {
     width: 100%;
     padding: 10px;
     margin: 5px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
-    user-select: none;
-    pointer-events: none;
 }
+
 input[type="submit"] {
     background-color: #0077ff;
     color: #fff;
@@ -42,11 +43,12 @@ input[type="submit"] {
     margin-left: 7px;
     margin-top: 20px;
 }
+
 input[type="submit"]:hover {
     background-color: #0055cc;
 }
 
-.formsign{
+.formsign {
     background: white;
     align-items: center;
     display: flex;
@@ -55,6 +57,7 @@ input[type="submit"]:hover {
     padding-top: 20px;
     padding-bottom: 40px;
 }
+
 .formsign {
     background: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
     align-items: center;

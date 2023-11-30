@@ -26,5 +26,15 @@
   <description>
      Welcome to Tomcat
   </description>
+   <servlet>
+        <servlet-name>AddGameServlet</servlet-name>
+        <servlet-class>AddGameServlet</servlet-class>
+    </servlet>
+
+    <!-- Servlet Mapping -->
+    <servlet-mapping>
+        <servlet-name>AddGameServlet</servlet-name>
+        <url-pattern>/AddGameServlet</url-pattern>
+    </servlet-mapping>
 
 </web-app>

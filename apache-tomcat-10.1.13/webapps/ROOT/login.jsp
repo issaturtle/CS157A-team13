@@ -24,7 +24,7 @@
     Statement stmt = null;
     ResultSet rs = null;
     String dbUser = "root";
-    String dbPassword = "";
+    String dbPassword = "Hunggo881224!";
     try {
         Class.forName("com.mysql.cj.jdbc.Driver");
         con = DriverManager.getConnection("jdbc:mysql://localhost:3306/gamepickerdb?autoReconnect=true&useSSL=false", dbUser, dbPassword);
@@ -37,10 +37,14 @@
         if (rs.next()) {
             String storedPassword = rs.getString("password");
             if (storedPassword.equals(password)) {
-                out.println("<p>Login successful!</p>");
                 session.setAttribute("loggedIn", true);
                 session.setAttribute("username", username);
-                response.sendRedirect("main.jsp");
+                if(rs.getInt("Admin") == 1){
+                    response.sendRedirect("admin.jsp");
+                }
+                else{
+                    response.sendRedirect("main.jsp");
+                }
             } else {
                 out.println("<p>Login failed. Please check your username and password.</p>");
             }

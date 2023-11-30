@@ -18,21 +18,32 @@ pageEncoding="UTF-8"%>
     %>
     <div class="navbar">
         <ul>
-            <li><h2>GamePickerDB</h2></li>
+            <li><a href="/homepage.jsp">Home</a></li>
             <li><a href="/main.jsp">Games</a></li>
         </ul>
-        <div class="search-bar">
-            <form action="/search.jsp" method="get">
-                <input type="text" name="search" placeholder="Search...">
-                <button type="submit">Search</button>
-            </form>
-        </div>
+        <ul>
+            <li><a href="/logout.jsp"><%= session.getAttribute("username") %></a></li>
+            <li><a href="/logout.jsp">Logout</a></li>
+        </ul>
+
     </div>
     <% String gametitle = request.getParameter("gameName"); %>
     <div class='main-body'>
-        <div>
-            <h1><%=gametitle%></h1>
+        <div style="padding-top: 70px;">
+            <div style="
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;">
+                <h1><%=gametitle%></h1>
+                <div class="search-bar">
+                    <form action="/search.jsp" method="get">
+                        <input type="text" name="search" placeholder="Search...">
+                        <button type="submit">Search</button>
+                     </form>
+                 </div>
+            </div>
             <button>Wishlist</button>
+            
         </div>
     
     
@@ -41,7 +52,7 @@ pageEncoding="UTF-8"%>
             Statement stmt = null;
             ResultSet rs = null;
             String user = "root";
-            String password = "";
+            String password = "Hunggo881224!";
 
             try {
                 Class.forName("com.mysql.cj.jdbc.Driver");
@@ -140,25 +151,56 @@ pageEncoding="UTF-8"%>
             }
             rs.close();
             stmt.close();
-            con.close();
         } catch(SQLException e) {
             out.println("SQLException caught: " + e.getMessage());
             e.printStackTrace();
         } 
         
         %>
+        <div>
+            <div>
+                <h1>Vendors</h1>
+                <div>
+                    <table class="vendorLinks">
+                        <tr>
+                            <th>Vendor</th>
+                            <th>Price</th>
+                            <th>Link</th>
+                        </tr>
+                        <%
+                        ResultSet result = null;
+                        String PricingQuery = "SELECT DistributorName, amount, currentprice.link FROM gamepickerdb.currentprice, game where currentprice.GameID = game.GameID and game.gameName = ? ORDER BY Amount;";
+                        PreparedStatement getStorePrices = con.prepareStatement(PricingQuery);
+                        getStorePrices.setString(1, gametitle); // Set the value of the parameter
+                        result = getStorePrices.executeQuery();
+                        while (result.next()) {
+                        %>
+                            
+                            <tr>
+                                <td><%= result.getString("DistributorName") %></td>
+                                <td><%= result.getString("Amount") %></td>
+                                <td><button><a href="<%= result.getString("Link") %>">Buy</a></button></td>
+                            </tr>
+                        <%
+                        }
+                        %>
+                        
+                    </table>
+                </div>
+            </div>
 
+        </div>
         <div>
             <h1>Historical Pricing</h1>
             <div class="chart-container">
                 <canvas id="pricingChart"></canvas>
             </div>
-        
         </div>
         <div>
             <h1>Comments</h1>
         </div>
     </div>
+
     <script src="script.js"></script>
   </body>
 </html>

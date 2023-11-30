@@ -1,5 +1,6 @@
 
 .game-section {
+    
     display: flex;
     align-items: center;
 }
@@ -18,15 +19,17 @@
 }
 
 .navbar {
+    display: flex;
     background-color: #333; /* Background color */
     overflow: hidden;
-    position: center;
+    position: fixed; /* Set position to fixed */
     top: 0;
     left: 0;
+    right: 0;
     width: 100%;
-    z-index: 1;
-    margin-bottom: 10px;
-
+    z-index: 1000; /* Adjust the z-index to ensure the navbar appears above other elements */
+    margin: 0 auto; /* Center the navbar horizontally */
+    justify-content: space-between;
     padding: 10px;
 }
 
@@ -217,4 +220,30 @@ canvas {
     width: 80%;
     padding: 10px;
 
+}
+
+.vendorLinks {
+    border: none;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    width: 50%;
+    margin-left: -70px;
+   /* Set the table width to 100% */
+}
+
+.vendorLinks tr td {
+    color: rgb(98, 167, 245);
+    text-align: center; /* Center the text in table data cells */
+}
+
+.vendorLinks th {
+    padding: 10px; /* Adjust the padding as needed */
+    /* Center the text in table header cells */
+    width: 33.33%; /* Set the width for evenly spaced columns */
+}
+
+.vendorLinks a {
+    text-decoration: none;
+    color: blueviolet;
 }
