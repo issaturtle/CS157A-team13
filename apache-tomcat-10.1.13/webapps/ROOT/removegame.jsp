@@ -9,7 +9,7 @@
 <body class="main">
     <%
         String dbUser = "root";
-        String dbPassword = "Hunggo881224!";
+        String dbPassword = "013626210!";
         int gameIDToRemove = Integer.parseInt(request.getParameter("gameIDToRemove"));
 
         try {

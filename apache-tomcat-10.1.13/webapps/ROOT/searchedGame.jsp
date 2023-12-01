@@ -1,4 +1,6 @@
 <%@ page import="java.sql.*" %>
+
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -29,7 +31,7 @@ pageEncoding="UTF-8"%>
     </div>
     <% String gametitle = request.getParameter("gameName"); %>
     <div class='main-body'>
-        <div style="padding-top: 70px;">
+        <div >
             <div style="
             display: flex;
             flex-direction: row;
@@ -52,7 +54,7 @@ pageEncoding="UTF-8"%>
             Statement stmt = null;
             ResultSet rs = null;
             String user = "root";
-            String password = "Hunggo881224!";
+            String password = "013626210!";
 
             try {
                 Class.forName("com.mysql.cj.jdbc.Driver");

@@ -39,7 +39,7 @@
         Statement stmt = null;
         ResultSet rs = null;
         String user = "root";
-        String password = "Hunggo881224!";
+        String password = "013626210!";
 
         String gametitle = request.getParameter("search");
         if (gametitle == null) {

@@ -5,9 +5,16 @@
 <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" type="text/css" href="/css/login.css">
+
     <title>Login Page</title>
+    <style>
+        body{
+            background-image: url('background.png');
+        }
+    </style>
 </head>
 <body>
+    <div class="overlay"></div>
     <h1>Login</h1>
     <form action="login.jsp" method="post">
         <label for="username">Username:</label>
@@ -24,7 +31,7 @@
     Statement stmt = null;
     ResultSet rs = null;
     String dbUser = "root";
-    String dbPassword = "Hunggo881224!";
+    String dbPassword = "013626210!";
     try {
         Class.forName("com.mysql.cj.jdbc.Driver");
         con = DriverManager.getConnection("jdbc:mysql://localhost:3306/gamepickerdb?autoReconnect=true&useSSL=false", dbUser, dbPassword);
@@ -39,6 +46,7 @@
             if (storedPassword.equals(password)) {
                 session.setAttribute("loggedIn", true);
                 session.setAttribute("username", username);
+                session.setAttribute("userID", rs.getInt("UserID"));
                 if(rs.getInt("Admin") == 1){
                     response.sendRedirect("admin.jsp");
                 }
