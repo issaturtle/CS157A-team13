@@ -42,7 +42,14 @@
             font-size:25px;
 
         }
-
+        .logo{
+            height:30px;
+            text-decoration: none;
+        }
+        .logo:hover {
+            background: none; /* Remove the background on hover */
+        }   
+      
     </style>
 </head>
 <body class="main">
@@ -54,8 +61,7 @@
     <div class="overlay" id="overlay"></div>
     <div class="navbar">
         <ul>
-            <li><a href="/homepage.jsp" >Home</a></li>
-            <li><a href="/main.jsp">Games</a></li>
+            <li><a href="/main.jsp"><img src="logo3.png" class="logo" alt="Games Logo"></a></li>
         </ul>
         <ul>
             <li><a onclick="toggleForm()">Request a Game</a></li>
