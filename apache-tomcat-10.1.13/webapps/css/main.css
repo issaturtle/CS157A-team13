@@ -1,0 +1,190 @@
+.navbar {
+    background-color: #333; /* Background color */
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    margin-bottom: 10px;
+    margin-top:-10px;
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    padding-bottom: 0px;
+    align-items: center; /* Center items vertically */
+
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    float: left;
+}
+
+.navbar li a {
+    display: block;
+    color: white; /* Text color */
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.navbar li h2 {
+    display: block;
+    color: white; /* Text color */
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.navbar li a:hover {
+    background-color: #ddd; /* Background color on hover */
+    color: black; /* Text color on hover */
+}
+
+.search-bar {
+    float: right;
+    padding: 10px;
+}
+
+.search-bar input[type="text"] {
+    padding: 6px;
+    border: none;
+    border-radius: 4px;
+    background-color: white;
+    color: black;
+}
+
+.search-bar button {
+    background-color: #0077ff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 10px;
+    cursor: pointer;
+}
+
+
+.game-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+
+.game-item {
+    text-align: center;
+    padding: 10px;
+}
+
+.game-image {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover; 
+}
+
+.main{
+    margin: 0 auto;
+    width: 80%;
+    padding: 10px;
+
+}
+
+.intro{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #161616;
+    color: #fff;  
+} 
+
+a{
+    
+    color: white;
+    font-weight: bold;
+
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust the transparency by changing the last parameter */
+    display: none; /* Initially hide the overlay */
+}
+
+#requestGameForm {
+    display: none;
+    background-color: #fff;
+    padding: 30px;
+    height:300px;
+    border-radius: 10px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:black;
+}
+
+#requestGameForm label,
+#requestGameForm input {
+    margin-bottom: 10px;
+}
+
+#requestGameForm input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 16px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Show the overlay when the addGameForm is displayed */
+#requestGameForm.show {
+    display: block;
+}
+
+/* Adjust the z-index to make sure the overlay is on top of other elements */
+.overlay.show {
+    display: block;
+    z-index: 0;
+}
+.exitButton {
+    background-color: white;
+    color:red;
+    font-size:30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 300px;
+    padding-bottom:20px;
+
+}
+
+.corebtn{
+    background-color: #0077ff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 10px;
+    cursor: pointer;
+}
+
+.gamedisplay{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+

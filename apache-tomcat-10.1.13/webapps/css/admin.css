@@ -1,0 +1,141 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+    text-align: center;
+    position: relative; /* Add relative positioning to the body */
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust the transparency by changing the last parameter */
+    display: none; /* Initially hide the overlay */
+}
+
+.navbar {
+    background-color: #333;
+    padding: 10px;
+    color: white;
+    text-align: right;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+#button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.square-button {
+    width: 200px;
+    height: 150px;
+    background-color: #007bff;
+    margin: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+#addGameForm {
+    display: none;
+    background-color: #fff;
+    padding: 30px;
+    height:500px;
+    width:300px;
+    border-radius: 10px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#addGameForm label,
+#addGameForm input {
+    margin-bottom: 10px;
+}
+
+#addGameForm input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 16px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Show the overlay when the addGameForm is displayed */
+#addGameForm.show {
+    display: block;
+}
+
+/* Adjust the z-index to make sure the overlay is on top of other elements */
+.overlay.show {
+    display: block;
+    z-index: 0;
+}
+.exitButton {
+    background-color: white;
+    color:red;
+    font-size:30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left:290px;
+    padding-bottom:20px;
+
+}
+
+#deleteGameForm label,
+#deleteGameForm input {
+    margin-bottom: 10px;
+}
+
+#deleteGameForm input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 16px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Show the overlay when the addGameForm is displayed */
+#deleteGameForm.show {
+    display: block;
+}
+#deleteGameForm {
+    display: none;
+    background-color: white;
+    padding: 30px;
+    height:500px;
+    border-radius: 10px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+
+
