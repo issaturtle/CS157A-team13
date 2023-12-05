@@ -1,0 +1,2742 @@
+28-Nov-2023 19:42:43.099 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+28-Nov-2023 19:42:43.099 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+28-Nov-2023 19:42:43.100 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@19b02dfd')
+28-Nov-2023 19:51:03.502 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+28-Nov-2023 19:51:03.502 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+28-Nov-2023 19:51:03.503 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@66e17eff')
+28-Nov-2023 19:51:03.787 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+28-Nov-2023 19:51:03.787 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+28-Nov-2023 20:44:18.202 SEVERE [http-nio-8080-exec-7] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [162] in the jsp file: [/searchedGame.jsp]
+prices cannot be resolved
+159:         <!-- ... -->
+160: 
+161:         <script>
+162:             var prices = <%= prices.toString() %>;
+163:             var dates = <%= dates.toString() %>;
+164: 
+165:             var ctx = document.getElementById('pricingChart').getContext('2d');
+
+
+An error occurred at line: [163] in the jsp file: [/searchedGame.jsp]
+dates cannot be resolved
+160: 
+161:         <script>
+162:             var prices = <%= prices.toString() %>;
+163:             var dates = <%= dates.toString() %>;
+164: 
+165:             var ctx = document.getElementById('pricingChart').getContext('2d');
+166:             var pricingChart = new Chart(ctx, {
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [162] in the jsp file: [/searchedGame.jsp]
+prices cannot be resolved
+159:         <!-- ... -->
+160: 
+161:         <script>
+162:             var prices = <%= prices.toString() %>;
+163:             var dates = <%= dates.toString() %>;
+164: 
+165:             var ctx = document.getElementById('pricingChart').getContext('2d');
+
+
+An error occurred at line: [163] in the jsp file: [/searchedGame.jsp]
+dates cannot be resolved
+160: 
+161:         <script>
+162:             var prices = <%= prices.toString() %>;
+163:             var dates = <%= dates.toString() %>;
+164: 
+165:             var ctx = document.getElementById('pricingChart').getContext('2d');
+166:             var pricingChart = new Chart(ctx, {
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:673)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+28-Nov-2023 21:18:03.132 SEVERE [http-nio-8080-exec-5] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [33] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+30: 
+31:     // Convert the historical data to JSON
+32:     response.setContentType("application/json");
+33:     response.getWriter().write(new Gson().toJson(historicalData));
+34: %>
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [33] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+30: 
+31:     // Convert the historical data to JSON
+32:     response.setContentType("application/json");
+33:     response.getWriter().write(new Gson().toJson(historicalData));
+34: %>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:673)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+28-Nov-2023 21:18:05.990 SEVERE [http-nio-8080-exec-7] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [org.apache.jasper.JasperException: java.lang.ClassNotFoundException: org.apache.jsp.fetchHistoricalPricing_jsp] with root cause
+	java.lang.ClassNotFoundException: org.apache.jsp.fetchHistoricalPricing_jsp
+		at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445)
+		at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:129)
+		at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:58)
+		at org.apache.catalina.core.DefaultInstanceManager.newInstance(DefaultInstanceManager.java:151)
+		at org.apache.jasper.servlet.JspServletWrapper.getServlet(JspServletWrapper.java:189)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:410)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:673)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+28-Nov-2023 21:18:09.157 SEVERE [http-nio-8080-exec-9] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [33] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+30: 
+31:     // Convert the historical data to JSON
+32:     response.setContentType("application/json");
+33:     response.getWriter().write(new Gson().toJson(historicalData));
+34: %>
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [33] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+30: 
+31:     // Convert the historical data to JSON
+32:     response.setContentType("application/json");
+33:     response.getWriter().write(new Gson().toJson(historicalData));
+34: %>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:673)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+28-Nov-2023 21:19:09.771 SEVERE [http-nio-8080-exec-1] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [33] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+30: 
+31:     // Convert the historical data to JSON
+32:     response.setContentType("application/json");
+33:     response.getWriter().write(new Gson().toJson(historicalData));
+34: %>
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [33] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+30: 
+31:     // Convert the historical data to JSON
+32:     response.setContentType("application/json");
+33:     response.getWriter().write(new Gson().toJson(historicalData));
+34: %>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:673)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+28-Nov-2023 21:23:20.994 SEVERE [http-nio-8080-exec-3] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [51] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+48: 
+49:     // Convert the historical data to JSON
+50:     response.setContentType("application/json");
+51:     response.getWriter().write(new Gson().toJson(historicalData));
+52: %>
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [51] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+48: 
+49:     // Convert the historical data to JSON
+50:     response.setContentType("application/json");
+51:     response.getWriter().write(new Gson().toJson(historicalData));
+52: %>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:673)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+28-Nov-2023 21:23:23.406 SEVERE [http-nio-8080-exec-5] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [org.apache.jasper.JasperException: java.lang.ClassNotFoundException: org.apache.jsp.fetchHistoricalPricing_jsp] with root cause
+	java.lang.ClassNotFoundException: org.apache.jsp.fetchHistoricalPricing_jsp
+		at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445)
+		at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:129)
+		at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:58)
+		at org.apache.catalina.core.DefaultInstanceManager.newInstance(DefaultInstanceManager.java:151)
+		at org.apache.jasper.servlet.JspServletWrapper.getServlet(JspServletWrapper.java:189)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:410)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:673)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+28-Nov-2023 21:25:26.826 SEVERE [http-nio-8080-exec-7] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [17] in the jsp file: [/fetchHistoricalPricing.jsp]
+pstmt cannot be resolved to a variable
+14: 
+15:         String query = "SELECT DateUpdated, Amount FROM pricehistory WHERE GameID = (SELECT GameID FROM game WHERE gameName = ?) ORDER BY DateUpdated";
+16: 
+17:         pstmt = con.prepareStatement(query);
+18:         pstmt.setString(1, gametitle);
+19:         rs = pstmt.executeQuery();
+20: 
+
+
+An error occurred at line: [18] in the jsp file: [/fetchHistoricalPricing.jsp]
+pstmt cannot be resolved
+15:         String query = "SELECT DateUpdated, Amount FROM pricehistory WHERE GameID = (SELECT GameID FROM game WHERE gameName = ?) ORDER BY DateUpdated";
+16: 
+17:         pstmt = con.prepareStatement(query);
+18:         pstmt.setString(1, gametitle);
+19:         rs = pstmt.executeQuery();
+20: 
+21:         while (rs.next()) {
+
+
+An error occurred at line: [19] in the jsp file: [/fetchHistoricalPricing.jsp]
+pstmt cannot be resolved
+16: 
+17:         pstmt = con.prepareStatement(query);
+18:         pstmt.setString(1, gametitle);
+19:         rs = pstmt.executeQuery();
+20: 
+21:         while (rs.next()) {
+22:             Map<String, Object> entry = new HashMap<>();
+
+
+An error occurred at line: [35] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+32: 
+33:     // Convert the historical data to JSON
+34:     response.setContentType("application/json");
+35:     response.getWriter().write(new Gson().toJson(historicalData));
+36: %>
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [17] in the jsp file: [/fetchHistoricalPricing.jsp]
+pstmt cannot be resolved to a variable
+14: 
+15:         String query = "SELECT DateUpdated, Amount FROM pricehistory WHERE GameID = (SELECT GameID FROM game WHERE gameName = ?) ORDER BY DateUpdated";
+16: 
+17:         pstmt = con.prepareStatement(query);
+18:         pstmt.setString(1, gametitle);
+19:         rs = pstmt.executeQuery();
+20: 
+
+
+An error occurred at line: [18] in the jsp file: [/fetchHistoricalPricing.jsp]
+pstmt cannot be resolved
+15:         String query = "SELECT DateUpdated, Amount FROM pricehistory WHERE GameID = (SELECT GameID FROM game WHERE gameName = ?) ORDER BY DateUpdated";
+16: 
+17:         pstmt = con.prepareStatement(query);
+18:         pstmt.setString(1, gametitle);
+19:         rs = pstmt.executeQuery();
+20: 
+21:         while (rs.next()) {
+
+
+An error occurred at line: [19] in the jsp file: [/fetchHistoricalPricing.jsp]
+pstmt cannot be resolved
+16: 
+17:         pstmt = con.prepareStatement(query);
+18:         pstmt.setString(1, gametitle);
+19:         rs = pstmt.executeQuery();
+20: 
+21:         while (rs.next()) {
+22:             Map<String, Object> entry = new HashMap<>();
+
+
+An error occurred at line: [35] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+32: 
+33:     // Convert the historical data to JSON
+34:     response.setContentType("application/json");
+35:     response.getWriter().write(new Gson().toJson(historicalData));
+36: %>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:673)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+28-Nov-2023 21:26:26.513 SEVERE [http-nio-8080-exec-9] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [17] in the jsp file: [/fetchHistoricalPricing.jsp]
+pstmt cannot be resolved to a variable
+14: 
+15:         String query = "SELECT DateUpdated, Amount FROM pricehistory WHERE GameID = (SELECT GameID FROM game WHERE gameName = ?) ORDER BY DateUpdated";
+16: 
+17:         pstmt = con.prepareStatement(query);
+18:         pstmt.setString(1, gametitle);
+19:         rs = pstmt.executeQuery();
+20: 
+
+
+An error occurred at line: [18] in the jsp file: [/fetchHistoricalPricing.jsp]
+pstmt cannot be resolved
+15:         String query = "SELECT DateUpdated, Amount FROM pricehistory WHERE GameID = (SELECT GameID FROM game WHERE gameName = ?) ORDER BY DateUpdated";
+16: 
+17:         pstmt = con.prepareStatement(query);
+18:         pstmt.setString(1, gametitle);
+19:         rs = pstmt.executeQuery();
+20: 
+21:         while (rs.next()) {
+
+
+An error occurred at line: [19] in the jsp file: [/fetchHistoricalPricing.jsp]
+pstmt cannot be resolved
+16: 
+17:         pstmt = con.prepareStatement(query);
+18:         pstmt.setString(1, gametitle);
+19:         rs = pstmt.executeQuery();
+20: 
+21:         while (rs.next()) {
+22:             Map<String, Object> entry = new HashMap<>();
+
+
+An error occurred at line: [35] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+32: 
+33:     // Convert the historical data to JSON
+34:     response.setContentType("application/json");
+35:     response.getWriter().write(new Gson().toJson(historicalData));
+36: %>
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [17] in the jsp file: [/fetchHistoricalPricing.jsp]
+pstmt cannot be resolved to a variable
+14: 
+15:         String query = "SELECT DateUpdated, Amount FROM pricehistory WHERE GameID = (SELECT GameID FROM game WHERE gameName = ?) ORDER BY DateUpdated";
+16: 
+17:         pstmt = con.prepareStatement(query);
+18:         pstmt.setString(1, gametitle);
+19:         rs = pstmt.executeQuery();
+20: 
+
+
+An error occurred at line: [18] in the jsp file: [/fetchHistoricalPricing.jsp]
+pstmt cannot be resolved
+15:         String query = "SELECT DateUpdated, Amount FROM pricehistory WHERE GameID = (SELECT GameID FROM game WHERE gameName = ?) ORDER BY DateUpdated";
+16: 
+17:         pstmt = con.prepareStatement(query);
+18:         pstmt.setString(1, gametitle);
+19:         rs = pstmt.executeQuery();
+20: 
+21:         while (rs.next()) {
+
+
+An error occurred at line: [19] in the jsp file: [/fetchHistoricalPricing.jsp]
+pstmt cannot be resolved
+16: 
+17:         pstmt = con.prepareStatement(query);
+18:         pstmt.setString(1, gametitle);
+19:         rs = pstmt.executeQuery();
+20: 
+21:         while (rs.next()) {
+22:             Map<String, Object> entry = new HashMap<>();
+
+
+An error occurred at line: [35] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+32: 
+33:     // Convert the historical data to JSON
+34:     response.setContentType("application/json");
+35:     response.getWriter().write(new Gson().toJson(historicalData));
+36: %>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:673)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+28-Nov-2023 21:26:47.451 SEVERE [http-nio-8080-exec-10] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [17] in the jsp file: [/fetchHistoricalPricing.jsp]
+pstmt cannot be resolved to a variable
+14: 
+15:         String query = "SELECT DateUpdated, Amount FROM pricehistory WHERE GameID = (SELECT GameID FROM game WHERE gameName = ?) ORDER BY DateUpdated";
+16: 
+17:         pstmt = con.prepareStatement(query);
+18:         pstmt.setString(1, gametitle);
+19:         rs = pstmt.executeQuery();
+20: 
+
+
+An error occurred at line: [18] in the jsp file: [/fetchHistoricalPricing.jsp]
+pstmt cannot be resolved
+15:         String query = "SELECT DateUpdated, Amount FROM pricehistory WHERE GameID = (SELECT GameID FROM game WHERE gameName = ?) ORDER BY DateUpdated";
+16: 
+17:         pstmt = con.prepareStatement(query);
+18:         pstmt.setString(1, gametitle);
+19:         rs = pstmt.executeQuery();
+20: 
+21:         while (rs.next()) {
+
+
+An error occurred at line: [19] in the jsp file: [/fetchHistoricalPricing.jsp]
+pstmt cannot be resolved
+16: 
+17:         pstmt = con.prepareStatement(query);
+18:         pstmt.setString(1, gametitle);
+19:         rs = pstmt.executeQuery();
+20: 
+21:         while (rs.next()) {
+22:             Map<String, Object> entry = new HashMap<>();
+
+
+An error occurred at line: [35] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+32: 
+33:     // Convert the historical data to JSON
+34:     response.setContentType("application/json");
+35:     response.getWriter().write(new Gson().toJson(historicalData));
+36: %>
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [17] in the jsp file: [/fetchHistoricalPricing.jsp]
+pstmt cannot be resolved to a variable
+14: 
+15:         String query = "SELECT DateUpdated, Amount FROM pricehistory WHERE GameID = (SELECT GameID FROM game WHERE gameName = ?) ORDER BY DateUpdated";
+16: 
+17:         pstmt = con.prepareStatement(query);
+18:         pstmt.setString(1, gametitle);
+19:         rs = pstmt.executeQuery();
+20: 
+
+
+An error occurred at line: [18] in the jsp file: [/fetchHistoricalPricing.jsp]
+pstmt cannot be resolved
+15:         String query = "SELECT DateUpdated, Amount FROM pricehistory WHERE GameID = (SELECT GameID FROM game WHERE gameName = ?) ORDER BY DateUpdated";
+16: 
+17:         pstmt = con.prepareStatement(query);
+18:         pstmt.setString(1, gametitle);
+19:         rs = pstmt.executeQuery();
+20: 
+21:         while (rs.next()) {
+
+
+An error occurred at line: [19] in the jsp file: [/fetchHistoricalPricing.jsp]
+pstmt cannot be resolved
+16: 
+17:         pstmt = con.prepareStatement(query);
+18:         pstmt.setString(1, gametitle);
+19:         rs = pstmt.executeQuery();
+20: 
+21:         while (rs.next()) {
+22:             Map<String, Object> entry = new HashMap<>();
+
+
+An error occurred at line: [35] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+32: 
+33:     // Convert the historical data to JSON
+34:     response.setContentType("application/json");
+35:     response.getWriter().write(new Gson().toJson(historicalData));
+36: %>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:673)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+28-Nov-2023 21:27:31.131 SEVERE [http-nio-8080-exec-2] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [16] in the generated java file: [/Users/marcorodriguez/Documents/GitHub/CS157A-team13/apache-tomcat-10.1.13/work/Catalina/localhost/ROOT/org/apache/jsp/fetchHistoricalPricing_jsp.java]
+Only a type can be imported. com.google.gson.Gson resolves to a package
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10: 
+11:     try {
+12:         // Database connection code
+
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10: 
+11:     try {
+12:         // Database connection code
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [16] in the generated java file: [/Users/marcorodriguez/Documents/GitHub/CS157A-team13/apache-tomcat-10.1.13/work/Catalina/localhost/ROOT/org/apache/jsp/fetchHistoricalPricing_jsp.java]
+Only a type can be imported. com.google.gson.Gson resolves to a package
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10: 
+11:     try {
+12:         // Database connection code
+
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10: 
+11:     try {
+12:         // Database connection code
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:673)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+28-Nov-2023 21:27:32.774 SEVERE [http-nio-8080-exec-4] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [org.apache.jasper.JasperException: java.lang.ClassNotFoundException: org.apache.jsp.fetchHistoricalPricing_jsp] with root cause
+	java.lang.ClassNotFoundException: org.apache.jsp.fetchHistoricalPricing_jsp
+		at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445)
+		at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:129)
+		at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:58)
+		at org.apache.catalina.core.DefaultInstanceManager.newInstance(DefaultInstanceManager.java:151)
+		at org.apache.jasper.servlet.JspServletWrapper.getServlet(JspServletWrapper.java:189)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:410)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:673)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+28-Nov-2023 21:27:36.891 SEVERE [http-nio-8080-exec-6] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [16] in the generated java file: [/Users/marcorodriguez/Documents/GitHub/CS157A-team13/apache-tomcat-10.1.13/work/Catalina/localhost/ROOT/org/apache/jsp/fetchHistoricalPricing_jsp.java]
+Only a type can be imported. com.google.gson.Gson resolves to a package
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10: 
+11:     try {
+12:         // Database connection code
+
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10: 
+11:     try {
+12:         // Database connection code
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [16] in the generated java file: [/Users/marcorodriguez/Documents/GitHub/CS157A-team13/apache-tomcat-10.1.13/work/Catalina/localhost/ROOT/org/apache/jsp/fetchHistoricalPricing_jsp.java]
+Only a type can be imported. com.google.gson.Gson resolves to a package
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10: 
+11:     try {
+12:         // Database connection code
+
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10: 
+11:     try {
+12:         // Database connection code
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:673)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+28-Nov-2023 21:29:22.005 SEVERE [http-nio-8080-exec-9] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [16] in the generated java file: [/Users/marcorodriguez/Documents/GitHub/CS157A-team13/apache-tomcat-10.1.13/work/Catalina/localhost/ROOT/org/apache/jsp/fetchHistoricalPricing_jsp.java]
+Only a type can be imported. com.google.gson.Gson resolves to a package
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10: 
+11:     try {
+12:         // Database connection code
+
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10: 
+11:     try {
+12:         // Database connection code
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [16] in the generated java file: [/Users/marcorodriguez/Documents/GitHub/CS157A-team13/apache-tomcat-10.1.13/work/Catalina/localhost/ROOT/org/apache/jsp/fetchHistoricalPricing_jsp.java]
+Only a type can be imported. com.google.gson.Gson resolves to a package
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10: 
+11:     try {
+12:         // Database connection code
+
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10: 
+11:     try {
+12:         // Database connection code
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:673)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+28-Nov-2023 21:29:23.193 SEVERE [http-nio-8080-exec-1] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [org.apache.jasper.JasperException: java.lang.ClassNotFoundException: org.apache.jsp.fetchHistoricalPricing_jsp] with root cause
+	java.lang.ClassNotFoundException: org.apache.jsp.fetchHistoricalPricing_jsp
+		at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445)
+		at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:129)
+		at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:58)
+		at org.apache.catalina.core.DefaultInstanceManager.newInstance(DefaultInstanceManager.java:151)
+		at org.apache.jasper.servlet.JspServletWrapper.getServlet(JspServletWrapper.java:189)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:410)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:673)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+28-Nov-2023 21:34:13.082 SEVERE [http-nio-8080-exec-4] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [16] in the generated java file: [/Users/marcorodriguez/Documents/GitHub/CS157A-team13/apache-tomcat-10.1.13/work/Catalina/localhost/ROOT/org/apache/jsp/fetchHistoricalPricing_jsp.java]
+Only a type can be imported. com.google.gson.Gson resolves to a package
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10:     String user = "root";
+11:     String password = "password";
+12: 
+
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10:     String user = "root";
+11:     String password = "password";
+12: 
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [16] in the generated java file: [/Users/marcorodriguez/Documents/GitHub/CS157A-team13/apache-tomcat-10.1.13/work/Catalina/localhost/ROOT/org/apache/jsp/fetchHistoricalPricing_jsp.java]
+Only a type can be imported. com.google.gson.Gson resolves to a package
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10:     String user = "root";
+11:     String password = "password";
+12: 
+
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10:     String user = "root";
+11:     String password = "password";
+12: 
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:673)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+28-Nov-2023 21:34:13.784 SEVERE [http-nio-8080-exec-8] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [org.apache.jasper.JasperException: java.lang.ClassNotFoundException: org.apache.jsp.fetchHistoricalPricing_jsp] with root cause
+	java.lang.ClassNotFoundException: org.apache.jsp.fetchHistoricalPricing_jsp
+		at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445)
+		at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:129)
+		at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:58)
+		at org.apache.catalina.core.DefaultInstanceManager.newInstance(DefaultInstanceManager.java:151)
+		at org.apache.jasper.servlet.JspServletWrapper.getServlet(JspServletWrapper.java:189)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:410)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:673)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+28-Nov-2023 21:39:00.584 SEVERE [http-nio-8080-exec-6] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [16] in the generated java file: [/Users/marcorodriguez/Documents/GitHub/CS157A-team13/apache-tomcat-10.1.13/work/Catalina/localhost/ROOT/org/apache/jsp/fetchHistoricalPricing_jsp.java]
+Only a type can be imported. com.google.gson.Gson resolves to a package
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10:     String user = "root";
+11:     String password = "password";
+12: 
+
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10:     String user = "root";
+11:     String password = "password";
+12: 
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [16] in the generated java file: [/Users/marcorodriguez/Documents/GitHub/CS157A-team13/apache-tomcat-10.1.13/work/Catalina/localhost/ROOT/org/apache/jsp/fetchHistoricalPricing_jsp.java]
+Only a type can be imported. com.google.gson.Gson resolves to a package
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10:     String user = "root";
+11:     String password = "password";
+12: 
+
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10:     String user = "root";
+11:     String password = "password";
+12: 
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:673)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+28-Nov-2023 21:40:40.508 SEVERE [http-nio-8080-exec-9] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [16] in the generated java file: [/Users/marcorodriguez/Documents/GitHub/CS157A-team13/apache-tomcat-10.1.13/work/Catalina/localhost/ROOT/org/apache/jsp/fetchHistoricalPricing_jsp.java]
+Only a type can be imported. com.google.gson.Gson resolves to a package
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10:     String user = "root";
+11:     String password = "password";
+12: 
+
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10:     String user = "root";
+11:     String password = "password";
+12: 
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [16] in the generated java file: [/Users/marcorodriguez/Documents/GitHub/CS157A-team13/apache-tomcat-10.1.13/work/Catalina/localhost/ROOT/org/apache/jsp/fetchHistoricalPricing_jsp.java]
+Only a type can be imported. com.google.gson.Gson resolves to a package
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10:     String user = "root";
+11:     String password = "password";
+12: 
+
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10:     String user = "root";
+11:     String password = "password";
+12: 
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:673)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+28-Nov-2023 21:44:00.462 SEVERE [http-nio-8080-exec-3] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [16] in the generated java file: [/Users/marcorodriguez/Documents/GitHub/CS157A-team13/apache-tomcat-10.1.13/work/Catalina/localhost/ROOT/org/apache/jsp/fetchHistoricalPricing_jsp.java]
+Only a type can be imported. com.google.gson.Gson resolves to a package
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10:     String user = "root";
+11:     String password = "password";
+12: 
+
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10:     String user = "root";
+11:     String password = "password";
+12: 
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [16] in the generated java file: [/Users/marcorodriguez/Documents/GitHub/CS157A-team13/apache-tomcat-10.1.13/work/Catalina/localhost/ROOT/org/apache/jsp/fetchHistoricalPricing_jsp.java]
+Only a type can be imported. com.google.gson.Gson resolves to a package
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10:     String user = "root";
+11:     String password = "password";
+12: 
+
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10:     String user = "root";
+11:     String password = "password";
+12: 
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:673)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+28-Nov-2023 21:44:02.585 SEVERE [http-nio-8080-exec-5] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [org.apache.jasper.JasperException: java.lang.ClassNotFoundException: org.apache.jsp.fetchHistoricalPricing_jsp] with root cause
+	java.lang.ClassNotFoundException: org.apache.jsp.fetchHistoricalPricing_jsp
+		at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445)
+		at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:129)
+		at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:58)
+		at org.apache.catalina.core.DefaultInstanceManager.newInstance(DefaultInstanceManager.java:151)
+		at org.apache.jasper.servlet.JspServletWrapper.getServlet(JspServletWrapper.java:189)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:410)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:673)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+28-Nov-2023 21:44:03.653 SEVERE [http-nio-8080-exec-7] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [org.apache.jasper.JasperException: java.lang.ClassNotFoundException: org.apache.jsp.fetchHistoricalPricing_jsp] with root cause
+	java.lang.ClassNotFoundException: org.apache.jsp.fetchHistoricalPricing_jsp
+		at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445)
+		at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:129)
+		at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:58)
+		at org.apache.catalina.core.DefaultInstanceManager.newInstance(DefaultInstanceManager.java:151)
+		at org.apache.jasper.servlet.JspServletWrapper.getServlet(JspServletWrapper.java:189)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:410)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:673)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+28-Nov-2023 21:44:08.592 SEVERE [http-nio-8080-exec-6] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [16] in the generated java file: [/Users/marcorodriguez/Documents/GitHub/CS157A-team13/apache-tomcat-10.1.13/work/Catalina/localhost/ROOT/org/apache/jsp/fetchHistoricalPricing_jsp.java]
+Only a type can be imported. com.google.gson.Gson resolves to a package
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10:     String user = "root";
+11:     String password = "password";
+12: 
+
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10:     String user = "root";
+11:     String password = "password";
+12: 
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [16] in the generated java file: [/Users/marcorodriguez/Documents/GitHub/CS157A-team13/apache-tomcat-10.1.13/work/Catalina/localhost/ROOT/org/apache/jsp/fetchHistoricalPricing_jsp.java]
+Only a type can be imported. com.google.gson.Gson resolves to a package
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10:     String user = "root";
+11:     String password = "password";
+12: 
+
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10:     String user = "root";
+11:     String password = "password";
+12: 
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:673)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+28-Nov-2023 21:44:16.940 SEVERE [http-nio-8080-exec-10] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [16] in the generated java file: [/Users/marcorodriguez/Documents/GitHub/CS157A-team13/apache-tomcat-10.1.13/work/Catalina/localhost/ROOT/org/apache/jsp/fetchHistoricalPricing_jsp.java]
+Only a type can be imported. com.google.gson.Gson resolves to a package
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10:     String user = "root";
+11:     String password = "password";
+12: 
+
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10:     String user = "root";
+11:     String password = "password";
+12: 
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [16] in the generated java file: [/Users/marcorodriguez/Documents/GitHub/CS157A-team13/apache-tomcat-10.1.13/work/Catalina/localhost/ROOT/org/apache/jsp/fetchHistoricalPricing_jsp.java]
+Only a type can be imported. com.google.gson.Gson resolves to a package
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10:     String user = "root";
+11:     String password = "password";
+12: 
+
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10:     String user = "root";
+11:     String password = "password";
+12: 
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:673)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+28-Nov-2023 21:52:11.540 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+28-Nov-2023 21:52:11.540 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+28-Nov-2023 21:52:14.302 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+28-Nov-2023 21:52:14.302 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+28-Nov-2023 21:52:14.302 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@611b35d6')
+28-Nov-2023 21:52:17.627 SEVERE [http-nio-8080-exec-1] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [16] in the generated java file: [/Users/marcorodriguez/Documents/GitHub/CS157A-team13/apache-tomcat-10.1.13/work/Catalina/localhost/ROOT/org/apache/jsp/fetchHistoricalPricing_jsp.java]
+Only a type can be imported. com.google.gson.Gson resolves to a package
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10:     String user = "root";
+11:     String password = "password";
+12: 
+
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10:     String user = "root";
+11:     String password = "password";
+12: 
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [16] in the generated java file: [/Users/marcorodriguez/Documents/GitHub/CS157A-team13/apache-tomcat-10.1.13/work/Catalina/localhost/ROOT/org/apache/jsp/fetchHistoricalPricing_jsp.java]
+Only a type can be imported. com.google.gson.Gson resolves to a package
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10:     String user = "root";
+11:     String password = "password";
+12: 
+
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10:     String user = "root";
+11:     String password = "password";
+12: 
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:673)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+28-Nov-2023 21:52:26.946 SEVERE [http-nio-8080-exec-8] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [16] in the generated java file: [/Users/marcorodriguez/Documents/GitHub/CS157A-team13/apache-tomcat-10.1.13/work/Catalina/localhost/ROOT/org/apache/jsp/fetchHistoricalPricing_jsp.java]
+Only a type can be imported. com.google.gson.Gson resolves to a package
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10:     String user = "root";
+11:     String password = "password";
+12: 
+
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10:     String user = "root";
+11:     String password = "password";
+12: 
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [16] in the generated java file: [/Users/marcorodriguez/Documents/GitHub/CS157A-team13/apache-tomcat-10.1.13/work/Catalina/localhost/ROOT/org/apache/jsp/fetchHistoricalPricing_jsp.java]
+Only a type can be imported. com.google.gson.Gson resolves to a package
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10:     String user = "root";
+11:     String password = "password";
+12: 
+
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10:     String user = "root";
+11:     String password = "password";
+12: 
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:673)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+28-Nov-2023 21:52:58.551 SEVERE [http-nio-8080-exec-10] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [16] in the generated java file: [/Users/marcorodriguez/Documents/GitHub/CS157A-team13/apache-tomcat-10.1.13/work/Catalina/localhost/ROOT/org/apache/jsp/fetchHistoricalPricing_jsp.java]
+Only a type can be imported. com.google.gson.Gson resolves to a package
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10:     String user = "root";
+11:     String password = "password";
+12: 
+
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10:     String user = "root";
+11:     String password = "password";
+12: 
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [16] in the generated java file: [/Users/marcorodriguez/Documents/GitHub/CS157A-team13/apache-tomcat-10.1.13/work/Catalina/localhost/ROOT/org/apache/jsp/fetchHistoricalPricing_jsp.java]
+Only a type can be imported. com.google.gson.Gson resolves to a package
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10:     String user = "root";
+11:     String password = "password";
+12: 
+
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10:     String user = "root";
+11:     String password = "password";
+12: 
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:673)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+28-Nov-2023 21:53:28.116 SEVERE [http-nio-8080-exec-2] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [16] in the generated java file: [/Users/marcorodriguez/Documents/GitHub/CS157A-team13/apache-tomcat-10.1.13/work/Catalina/localhost/ROOT/org/apache/jsp/fetchHistoricalPricing_jsp.java]
+Only a type can be imported. com.google.gson.Gson resolves to a package
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10:     String user = "root";
+11:     String password = "password";
+12: 
+
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10:     String user = "root";
+11:     String password = "password";
+12: 
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [16] in the generated java file: [/Users/marcorodriguez/Documents/GitHub/CS157A-team13/apache-tomcat-10.1.13/work/Catalina/localhost/ROOT/org/apache/jsp/fetchHistoricalPricing_jsp.java]
+Only a type can be imported. com.google.gson.Gson resolves to a package
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10:     String user = "root";
+11:     String password = "password";
+12: 
+
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10:     String user = "root";
+11:     String password = "password";
+12: 
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:673)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+28-Nov-2023 21:53:30.757 SEVERE [http-nio-8080-exec-4] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [org.apache.jasper.JasperException: java.lang.ClassNotFoundException: org.apache.jsp.fetchHistoricalPricing_jsp] with root cause
+	java.lang.ClassNotFoundException: org.apache.jsp.fetchHistoricalPricing_jsp
+		at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445)
+		at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:129)
+		at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:58)
+		at org.apache.catalina.core.DefaultInstanceManager.newInstance(DefaultInstanceManager.java:151)
+		at org.apache.jasper.servlet.JspServletWrapper.getServlet(JspServletWrapper.java:189)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:410)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:673)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+28-Nov-2023 21:53:35.855 SEVERE [http-nio-8080-exec-6] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [16] in the generated java file: [/Users/marcorodriguez/Documents/GitHub/CS157A-team13/apache-tomcat-10.1.13/work/Catalina/localhost/ROOT/org/apache/jsp/fetchHistoricalPricing_jsp.java]
+Only a type can be imported. com.google.gson.Gson resolves to a package
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10:     String user = "root";
+11:     String password = "password";
+12: 
+
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10:     String user = "root";
+11:     String password = "password";
+12: 
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [16] in the generated java file: [/Users/marcorodriguez/Documents/GitHub/CS157A-team13/apache-tomcat-10.1.13/work/Catalina/localhost/ROOT/org/apache/jsp/fetchHistoricalPricing_jsp.java]
+Only a type can be imported. com.google.gson.Gson resolves to a package
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10:     String user = "root";
+11:     String password = "password";
+12: 
+
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10:     String user = "root";
+11:     String password = "password";
+12: 
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:673)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+28-Nov-2023 21:54:01.060 SEVERE [http-nio-8080-exec-8] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [16] in the generated java file: [/Users/marcorodriguez/Documents/GitHub/CS157A-team13/apache-tomcat-10.1.13/work/Catalina/localhost/ROOT/org/apache/jsp/fetchHistoricalPricing_jsp.java]
+Only a type can be imported. com.google.gson.Gson resolves to a package
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10:     String user = "root";
+11:     String password = "password";
+12: 
+
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10:     String user = "root";
+11:     String password = "password";
+12: 
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [16] in the generated java file: [/Users/marcorodriguez/Documents/GitHub/CS157A-team13/apache-tomcat-10.1.13/work/Catalina/localhost/ROOT/org/apache/jsp/fetchHistoricalPricing_jsp.java]
+Only a type can be imported. com.google.gson.Gson resolves to a package
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10:     String user = "root";
+11:     String password = "password";
+12: 
+
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10:     String user = "root";
+11:     String password = "password";
+12: 
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:673)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+28-Nov-2023 21:54:30.351 SEVERE [http-nio-8080-exec-9] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [16] in the generated java file: [/Users/marcorodriguez/Documents/GitHub/CS157A-team13/apache-tomcat-10.1.13/work/Catalina/localhost/ROOT/org/apache/jsp/fetchHistoricalPricing_jsp.java]
+Only a type can be imported. com.google.gson.Gson resolves to a package
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10:     String user = "root";
+11:     String password = "password";
+12: 
+
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10:     String user = "root";
+11:     String password = "password";
+12: 
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [16] in the generated java file: [/Users/marcorodriguez/Documents/GitHub/CS157A-team13/apache-tomcat-10.1.13/work/Catalina/localhost/ROOT/org/apache/jsp/fetchHistoricalPricing_jsp.java]
+Only a type can be imported. com.google.gson.Gson resolves to a package
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10:     String user = "root";
+11:     String password = "password";
+12: 
+
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10:     String user = "root";
+11:     String password = "password";
+12: 
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:673)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+28-Nov-2023 21:58:38.959 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+28-Nov-2023 21:58:38.960 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+28-Nov-2023 21:59:24.731 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+28-Nov-2023 21:59:24.732 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+28-Nov-2023 21:59:24.734 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@40c06358')
+28-Nov-2023 21:59:53.052 SEVERE [http-nio-8080-exec-6] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [16] in the generated java file: [/Users/marcorodriguez/Documents/GitHub/CS157A-team13/apache-tomcat-10.1.13/work/Catalina/localhost/ROOT/org/apache/jsp/fetchHistoricalPricing_jsp.java]
+Only a type can be imported. com.google.gson.Gson resolves to a package
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10:     String user = "root";
+11:     String password = "password";
+12: 
+
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10:     String user = "root";
+11:     String password = "password";
+12: 
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [16] in the generated java file: [/Users/marcorodriguez/Documents/GitHub/CS157A-team13/apache-tomcat-10.1.13/work/Catalina/localhost/ROOT/org/apache/jsp/fetchHistoricalPricing_jsp.java]
+Only a type can be imported. com.google.gson.Gson resolves to a package
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10:     String user = "root";
+11:     String password = "password";
+12: 
+
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10:     String user = "root";
+11:     String password = "password";
+12: 
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:673)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+28-Nov-2023 22:00:14.262 SEVERE [http-nio-8080-exec-7] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [16] in the generated java file: [/Users/marcorodriguez/Documents/GitHub/CS157A-team13/apache-tomcat-10.1.13/work/Catalina/localhost/ROOT/org/apache/jsp/fetchHistoricalPricing_jsp.java]
+Only a type can be imported. com.google.gson.Gson resolves to a package
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10:     String user = "root";
+11:     String password = "password";
+12: 
+
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10:     String user = "root";
+11:     String password = "password";
+12: 
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [16] in the generated java file: [/Users/marcorodriguez/Documents/GitHub/CS157A-team13/apache-tomcat-10.1.13/work/Catalina/localhost/ROOT/org/apache/jsp/fetchHistoricalPricing_jsp.java]
+Only a type can be imported. com.google.gson.Gson resolves to a package
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10:     String user = "root";
+11:     String password = "password";
+12: 
+
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10:     String user = "root";
+11:     String password = "password";
+12: 
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:673)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+28-Nov-2023 22:04:47.229 SEVERE [http-nio-8080-exec-9] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [16] in the generated java file: [/Users/marcorodriguez/Documents/GitHub/CS157A-team13/apache-tomcat-10.1.13/work/Catalina/localhost/ROOT/org/apache/jsp/fetchHistoricalPricing_jsp.java]
+Only a type can be imported. com.google.gson.Gson resolves to a package
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10:     String user = "root";
+11:     String password = "password";
+12: 
+
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10:     String user = "root";
+11:     String password = "password";
+12: 
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [16] in the generated java file: [/Users/marcorodriguez/Documents/GitHub/CS157A-team13/apache-tomcat-10.1.13/work/Catalina/localhost/ROOT/org/apache/jsp/fetchHistoricalPricing_jsp.java]
+Only a type can be imported. com.google.gson.Gson resolves to a package
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10:     String user = "root";
+11:     String password = "password";
+12: 
+
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10:     String user = "root";
+11:     String password = "password";
+12: 
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:673)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+28-Nov-2023 22:04:52.128 SEVERE [http-nio-8080-exec-10] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [16] in the generated java file: [/Users/marcorodriguez/Documents/GitHub/CS157A-team13/apache-tomcat-10.1.13/work/Catalina/localhost/ROOT/org/apache/jsp/fetchHistoricalPricing_jsp.java]
+Only a type can be imported. com.google.gson.Gson resolves to a package
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10:     String user = "root";
+11:     String password = "password";
+12: 
+
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10:     String user = "root";
+11:     String password = "password";
+12: 
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [16] in the generated java file: [/Users/marcorodriguez/Documents/GitHub/CS157A-team13/apache-tomcat-10.1.13/work/Catalina/localhost/ROOT/org/apache/jsp/fetchHistoricalPricing_jsp.java]
+Only a type can be imported. com.google.gson.Gson resolves to a package
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10:     String user = "root";
+11:     String password = "password";
+12: 
+
+
+An error occurred at line: [9] in the jsp file: [/fetchHistoricalPricing.jsp]
+Gson cannot be resolved to a type
+6:     Connection con = null;
+7:     PreparedStatement pstmt = null;
+8:     ResultSet rs = null;
+9:     Gson gson = new Gson(); // Instantiate Gson
+10:     String user = "root";
+11:     String password = "password";
+12: 
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:673)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
