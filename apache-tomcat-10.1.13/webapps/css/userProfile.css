@@ -1,0 +1,144 @@
+body, p, h1, h2, h3, ul, li {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #161616; /* Dark background */
+    color: #fff; /* Light text */
+    line-height: 1.6;
+    padding-left: 10%;
+    width: 80%;
+}
+
+.navbar {
+    display: flex;
+    background-color: #333; /* Darker shade for navbar */
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    justify-content: space-between;
+    padding: 10px 20px;
+    align-items: center;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    padding: 0 16px;
+}
+
+.navbar li a, .navbar li h2 {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 8px 16px;
+}
+
+.navbar li a:hover, .navbar li a:focus {
+    background-color: #555; /* Lighter hover effect */
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+/* Continuing from the previous part... */
+
+.profile-info {
+    margin: 20px auto;
+    max-width: 800px;
+    background-color: #242424; /* Dark background for profile info */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding-bottom: 30px;
+}
+
+.profile-info h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #ddd; /* Lighter color for headings */
+    border-bottom: 1px solid #444; /* Darker border */
+    padding-bottom: 10px;
+}
+
+.section {
+    margin-bottom: 30px;
+    padding: 20px 0; /* added vertical padding for each section */
+}
+
+.section h2 {
+    font-size: 24px;
+    color: #007bff; /* Keeping the blue color for contrast */
+    margin-bottom: 10px;
+}
+
+.list, .table {
+    background-color: #2d2d2d; /* Darker background for lists and tables */
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    margin-bottom: 20px; /* added margin between list/table and the next section */
+}
+
+.list ul {
+    padding-left: 20px;
+}
+
+.list li {
+    border-bottom: 1px solid #444; /* Dark border for list items */
+    padding: 10px 0;
+    color: #ccc; /* Lighter text for readability */
+}
+
+.list li:last-child {
+    border-bottom: none;
+}
+
+.table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #444; /* Dark border for table cells */
+    color: #ccc; /* Lighter text for readability */
+}
+
+.table th {
+    background-color: #444; /* Even darker shade for table headers */
+    color: white;
+}
+
+.reviews ul {
+    padding: 0;
+}
+
+.reviews li {
+    list-style-type: none;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #444; /* Dark border for review items */
+    padding-bottom: 15px;
+}
+
+.reviews strong {
+    display: block;
+    margin-bottom: 5px;
+    color: #007bff; /* Blue color for emphasis */
+}
+
+.reviews p {
+    font-size: 14px;
+    line-height: 1.4;
+    color: #ccc; /* Lighter text for readability */
+}
