@@ -1,5 +1,6 @@
 <%@ page import="java.sql.*" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<% //Delete the game from currentprice, pricehistory, and game relations when the game is deleted %>
 <!DOCTYPE html>
 <html>
 <head>

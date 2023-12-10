@@ -1,5 +1,6 @@
 <%@ page import="java.sql.*" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<% //Main admin page to perform add,remove,update, and game details %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,7 +25,7 @@
             justify-content: space-between;
         }
         .logo:hover {
-            background: none; /* Remove the background on hover */
+            background: none;
         }
         #RequestedGame{
             display: none;
@@ -205,6 +206,8 @@
         <a href="#" class="square-button" onclick="toggleDeleteForm()">Delete Game</a>
         <a href="#" class="square-button" onclick="toggleEditForm()">Edit Game</a>
     </div>
+
+    <% //Form to add game %>
     <div id="addGameForm">
         <button class="exitButton" onclick="toggleForm()">X</button>
         <h2>Add Game</h2>
@@ -249,34 +252,9 @@
             </table>
             <input type="submit" value="Submit">
 
-
-
-        <%--            <label for="releaseDate">Release Date:</label>--%>
-<%--            <input type="date" id="releaseDate" name="releaseDate" required>--%>
-
-<%--            <label for="developer">Developer:</label>--%>
-<%--            <input type="text" id="developer" name="developer" required>--%>
-
-<%--            <label for="genreid">Genre ID:</label>--%>
-<%--            <input type="text" id="genreid" name="genreid" required>--%>
-
-<%--            <label for="description">Description:</label>--%>
-<%--            <input type="text" id="description" name="description" required>--%>
-
-<%--            <label for="price">Price:</label>--%>
-<%--            <input type="number" id="price" name="price" required>--%>
-
-<%--            <label for="imglink">Image link:</label>--%>
-<%--            <input type="text" id="imglink" name="imglink" required>--%>
-
-<%--            <label for="vendorlink">Vendor link:</label>--%>
-<%--            <input type="text" id="vendorlink" name="vendorlink" required>--%>
-
-<%--            <label for="vendor">Vendor:</label>--%>
-<%--            <input type="text" id="vendor" name="vendor" required>--%>
-
         </form>
     </div>
+    <% //Form to delete game %>
     <div id="deleteGameForm">
         <button class="exitButton" onclick="toggleDeleteForm()">X</button>
         <h2>Delete Game</h2>
@@ -327,6 +305,7 @@
             }
         %>
     </div>
+    <% //Form to edit game %>
     <div id="editGameForm" >
         <button class="exitButton" onclick="toggleEditForm()">X</button>
         <form action="/CS157APRoject_war_exploded/editgame-details.jsp" method="post">
@@ -336,6 +315,8 @@
             <input type="submit" value="Edit Game">
         </form>
     </div>
+
+    <% //Script to show forms whenever buttons are clicked %>
     <script>
         function toggleForm() {
             var addGameForm = document.getElementById("addGameForm");

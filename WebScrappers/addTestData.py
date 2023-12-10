@@ -1,3 +1,6 @@
+"""
+addTestData.py - This script will add demo data to Cyberpunk 2077.
+"""
 import mysql.connector
 import random
 from datetime import datetime, timedelta

@@ -1,6 +1,7 @@
 <%@ page import="java.sql.*, java.util.*, com.google.gson.Gson, java.text.SimpleDateFormat" %>
 <%@ page import="java.util.Date" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<% //This relation renders the game details, from description to price. It also has wishlist, purchase records, historical pricing, and comments %>
 <!DOCTYPE html>
 <html>
 <head>

@@ -1,6 +1,7 @@
 <%@ page import="java.sql.*, java.text.SimpleDateFormat" %>
 <%@ page import="java.util.Date" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<% //User.jsp allows user to get their profile information, what they have purchased and wishlist. They can also see the comments they made. %>
 <!DOCTYPE html>
 <html>
 <head>

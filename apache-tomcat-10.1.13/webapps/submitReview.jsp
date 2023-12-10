@@ -1,4 +1,5 @@
 <%@ page import="java.sql.*, java.util.Date" %>
+<% //This JSP will create a sql query to submit comments on a game into the userreview relation %>
 <%
   Connection con = null;
   PreparedStatement pstmt = null;

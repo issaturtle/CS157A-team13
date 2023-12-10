@@ -2,6 +2,7 @@
 <%@ page import="java.time.LocalDate"%>
 <%@ page import="java.time.format.DateTimeFormatter"%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<% //JSP to send user game request and create query to insert into requestlist relation %>
 <html>
 <head>
     <title>Title</title>

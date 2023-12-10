@@ -3,6 +3,9 @@
 <%@ page import="java.text.SimpleDateFormat" %>
 <%@ page import="java.util.Date" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%
+    //This file is used to insert a game into the database
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,6 +14,7 @@
 </head>
 <body class="main">
     <%
+        // Database credentials
 
     String dbUser = "root";
     String dbPassword = "013626210!";
@@ -18,11 +22,11 @@
         // Load the JDBC driver
         Class.forName("com.mysql.cj.jdbc.Driver");
 
-        // Establish a connection
+        // Establish a connection to the database
         Connection con = null;
         con = DriverManager.getConnection("jdbc:mysql://localhost:3306/gamepickerdb?autoReconnect=true&useSSL=false", dbUser, dbPassword);
 
-        // Get form data
+        // Get form data from request parameters
         String gameName = request.getParameter("gameName");
         String releaseDateString = request.getParameter("releaseDate");
         String developer = request.getParameter("developer");
@@ -32,12 +36,13 @@
         String imgLink = request.getParameter("imglink");
         String vendorLink = request.getParameter("vendorlink");
         String vendor = request.getParameter("vendor");
+
         // Correct date parsing
         SimpleDateFormat inputFormat = new SimpleDateFormat("yyyy-MM-dd");
         try {
             Date releaseDate = inputFormat.parse(releaseDateString);
 
-            // Prepare and execute SQL query
+            // Prepare and execute SQL query for game insertion
             String sql = "INSERT INTO game (gameName, releaseDate, Developer, GenreID, Description, Link, OriginalPrice ) VALUES (?, ?, ?, ?, ?, ?, ?)";
             PreparedStatement statement = con.prepareStatement(sql,Statement.RETURN_GENERATED_KEYS);
             statement.setString(1, gameName);
@@ -48,7 +53,6 @@
             statement.setString(6, imgLink);
             statement.setString(7, price);
 
-
             int rowsAffected = statement.executeUpdate();
 
             // Check if the insertion was successful
@@ -57,6 +61,8 @@
                 ResultSet gameIds = statement.getGeneratedKeys();
                 if(gameIds.next()){
                     int gameID = gameIds.getInt(1);
+
+                    // Prepare and execute SQL query for current price insertion
                     sql = "INSERT INTO currentprice ( GameID, DistributorName, Amount, DateUpdated, Link) VALUES (?, ?, ?, ?, ?)";
                     PreparedStatement currentPriceStmt = con.prepareStatement(sql, statement.RETURN_GENERATED_KEYS);
                     

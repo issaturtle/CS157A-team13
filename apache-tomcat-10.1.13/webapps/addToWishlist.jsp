@@ -1,4 +1,5 @@
 <%@ page import="java.sql.*, java.util.Date" %>
+<% //When user presses wishlist button on searchedGame.jsp, add the game to their wishlist database %>
 <%
   Connection con = null;
   PreparedStatement pstmt = null;
@@ -37,12 +38,14 @@
     }
 
     // Redirect back to the game details page or show a success message
-    response.sendRedirect("/CS157APRoject_war_exploded/searchedGame.jsp?gameName=" + gameName); // Redirect to the game details page
+    response.sendRedirect("/CS157APRoject_war_exploded/searchedGame.jsp?gameName=" + gameName);
   } catch (SQLException e) {
     e.printStackTrace();
     // Handle exceptions
     request.getSession().setAttribute("error", "Error adding game to wishlist: " + e.getMessage());
-    response.sendRedirect("/CS157APRoject_war_exploded/searchedGame.jsp?gameName=" + gameName); // Redirect back with error
+
+    // Redirect back with error
+    response.sendRedirect("/CS157APRoject_war_exploded/searchedGame.jsp?gameName=" + gameName);
   } finally {
     // Close connections and result set
     if (rs != null) try { rs.close(); } catch (Exception e) {}

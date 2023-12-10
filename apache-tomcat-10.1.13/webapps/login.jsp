@@ -1,5 +1,7 @@
 <%@ page import="java.sql.*" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<% //This jsp allows users to input their account information and compares user input with data from the users relation
+   //Once authenticated, the user information will be stored in session cookies to be reused throughout the application. %>
 <!DOCTYPE html>
 <html>
 <head>

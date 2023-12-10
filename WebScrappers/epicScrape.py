@@ -1,3 +1,6 @@
+"""
+epicScrape.py - This script will scrape the Epic store for game data and insert it into the database.
+"""
 import mysql.connector
 import requests
 from bs4 import BeautifulSoup

@@ -1,5 +1,6 @@
 <%@ page import="java.sql.*" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<% //JSP to send remove requests from the requestlist by admin %>
 <html>
 <head>
     <title>Title</title>

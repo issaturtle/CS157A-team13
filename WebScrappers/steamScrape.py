@@ -1,8 +1,12 @@
+"""
+steamScrape.py - This script will scrape the Steam store for game data and insert it into the database.
+"""
 import mysql.connector
 import requests
 from bs4 import BeautifulSoup
 from datetime import datetime
 from datetime import date
+
 
 # MySQL configurations
 config = {
@@ -35,7 +39,9 @@ game_links = [
     # "https://store.steampowered.com/app/1145360/Hades/"
 ]
 
+# Loop through each game link
 for link in game_links:
+    #Use beautiful soup to scrape the data from the HTML page
     response = requests.get(link)
     soup = BeautifulSoup(response.content, 'html.parser')
     gameName = soup.find('div', class_='apphub_AppName')
@@ -59,11 +65,9 @@ for link in game_links:
 
     price = float(discount_ogprice_div.text.strip().replace("$", "")) if discount_ogprice_div is not None else float(
         price_div.text.strip().replace("$", ""))
-    # price = float(price_div.text.strip().replace("$", ""))  # Convert price text to a float
     if (discount_div != None):
         discount = float(discount_div.text.strip().replace("$", ""))
-        # print(price)
-    # print(discount)
+
 
     if game_id == None:
         if dev_row:
@@ -90,6 +94,7 @@ for link in game_links:
         # values = (gameName, formatted_date, developer, genreID, description, link, float(price))
         # cursor.execute(query,(gameName, formatted_date, developer, genreID, description, picture_link, float(price)))
 
+        # Load up the hashmap to insert into the database
         game_data = {
             'GameName': gameName,
             'ReleaseDate': date_only,
