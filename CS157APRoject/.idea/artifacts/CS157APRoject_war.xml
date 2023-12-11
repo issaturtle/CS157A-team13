@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="CS157APRoject:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>CS157APRoject</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="CS157APRoject-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="CS157APRoject:war exploded" />
+    </root>
+  </artifact>
+</component>
