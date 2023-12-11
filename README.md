@@ -1,7 +1,7 @@
 # CS157A-team13
 For code JSP files go to appache->webapps
 
-1. Unzip the file Team13_Project.zip
+1. Pull this repository from Github
 2. Launch IntelliJ and open a project  
     a. Inside of the zip, you will find a folder called CS157APRoject; select that project to open
 3. The package will launch as a Jakarta 9 project. Update your dependencies by selecting Maven on the right-hand side and clicking the highlighted circle
