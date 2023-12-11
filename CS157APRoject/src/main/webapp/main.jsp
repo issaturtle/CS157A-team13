@@ -2,6 +2,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ page import="java.util.Arrays" %>
 <%@ page import="java.util.HashMap" %>
+<% //This JSP renders the game page, where users can browse the existing games in the database.
+    //On this page, users can filter games, search games, request games, accessing user profiles, and see game details%>
 <!DOCTYPE html>
 <html>
 <head>

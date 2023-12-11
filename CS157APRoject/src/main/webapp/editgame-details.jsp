@@ -1,6 +1,8 @@
 <%@ page import="java.sql.*" %>
 <%@ page import="java.text.SimpleDateFormat" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<% //This jsp renders the edit game form. It first queries the game relation for the information on the game, then allowing admins to edit and update new information  %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

@@ -1,5 +1,7 @@
 <%@ page import="java.sql.*" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<% //Main admin page to perform add,remove,update, and game details %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

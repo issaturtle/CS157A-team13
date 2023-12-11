@@ -1,5 +1,7 @@
 <%@ page import="java.sql.*" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<% //Allow users to sign up to the page, and add their information to the database and update cookies %>
+
 <!DOCTYPE html>
 <html>
 <head>

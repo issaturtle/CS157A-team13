@@ -1,4 +1,6 @@
 <%@ page import="java.sql.*" %>
+<% //JSP to delete game by sending query to userwishlist relation %>
+
 <%
   Connection con = null;
   PreparedStatement pstmt = null;

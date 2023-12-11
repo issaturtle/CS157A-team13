@@ -1,5 +1,8 @@
 <%@ page import="java.sql.*, java.util.Date" %>
 <%
+  // Add game to the user's purchase history database when the user presses "Buy" on a vendor in searchedGame.jsp
+%>
+<%
   Connection con = null;
   PreparedStatement pstmt = null;
   ResultSet rs = null; // Declare rs here

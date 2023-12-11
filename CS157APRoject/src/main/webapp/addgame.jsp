@@ -3,6 +3,9 @@
 <%@ page import="java.text.SimpleDateFormat" %>
 <%@ page import="java.util.Date" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%
+    //This file is used to insert a game into the database
+%>
 <!DOCTYPE html>
 <html>
 <head>

@@ -1,5 +1,7 @@
 <%@ page import="java.sql.*" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<% //JSP to create the form to update game through admin.jsp %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

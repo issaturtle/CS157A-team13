@@ -1,5 +1,7 @@
 <%@ page import="java.sql.*" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<% //This JSP will render the games based on what users searched. It could be genre, letters, or game name %>
+
 <!DOCTYPE html>
 <html>
 <head>

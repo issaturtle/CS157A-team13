@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<% //This jsp renders the homepage of our project %>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8" />

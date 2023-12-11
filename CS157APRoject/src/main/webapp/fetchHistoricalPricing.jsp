@@ -1,4 +1,6 @@
 <%@ page import="java.sql.*, java.util.*, com.google.gson.Gson, java.text.SimpleDateFormat" %>
+<% //This JSP pulls historical pricing data from the pricehistory relation and return it to searchedgame.jsp  %>
+
 <%
     String gametitle = request.getParameter("gameName");
     List<Map<String, Object>> historicalData = new ArrayList<>();

@@ -1,4 +1,6 @@
 <%@ page import="java.sql.*, java.util.Date" %>
+<% //When user presses wishlist button on searchedGame.jsp, add the game to their wishlist database %>
+
 <%
   Connection con = null;
   PreparedStatement pstmt = null;

@@ -1,4 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<% //Reset the session cookies to null, preventing users from accessing pages without login first %>
+
 <!DOCTYPE html>
 <html>
 <head>

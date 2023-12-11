@@ -1,5 +1,7 @@
 <%@ page import="java.sql.*" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %><html>
+<% //This page will render the requests that user sent, allowing admins to see what games people want to be on the site%>
+
 <head>
     <title>Title</title>
     <link rel="stylesheet" type="text/css" href="/CS157APRoject_war_exploded/css/admin.css">
